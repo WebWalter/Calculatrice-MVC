@@ -16,12 +16,12 @@
     {
         <div class="form-group">
             @Html.LabelFor(x => x.a)
-            @Html.EditorFor(x => x.a, new { @class = "form-control" })
+            @Html.EditorFor(x => x.a)
             @Html.ValidationMessageFor(x => x.a)
         </div>
         <div class="form-group">
             @Html.LabelFor(x => x.b)
-            @Html.EditorFor(x => x.b, new { @class = "form-control" })
+            @Html.EditorFor(x => x.b)
             @Html.ValidationMessageFor(x => x.b)
         </div>
         <input type="submit" name="command" value="Add" class="btn btn-primary" />
