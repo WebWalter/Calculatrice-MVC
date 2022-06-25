@@ -1,0 +1,38 @@
+﻿@model Calculatrice_MVC.Models.Calculatrice
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<style>
+    td, th{
+        padding: 10px;
+    }
+</style>
+
+<div align="center">
+    <h2>Index</h2>
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            @Html.LabelFor(x => x.a)
+            @Html.EditorFor(x => x.a, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.a)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.b)
+            @Html.EditorFor(x => x.b, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.b)
+        </div>
+        <input type="submit" name="command" value="Add" class="btn btn-primary" />
+        <input type="submit" name="command" value="Sub" class="btn btn-primary"/>
+        <input type="submit" name="command" value="Mul" class="btn btn-primary"/>
+        <input type="submit" name="command" value="Div" class="btn btn-primary"/>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.result)
+            @Html.DisplayFor(x => x.result, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.result)
+        </div>
+    }
+</div>
